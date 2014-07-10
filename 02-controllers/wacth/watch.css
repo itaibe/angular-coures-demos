@@ -1,0 +1,19 @@
+
+div[ng-controller="ParentController as parent"] {
+    padding: 5px;
+    border: 1px solid red;
+}
+
+div[ng-controller="FirstChildController as firstChild"] {
+    margin: 5px auto;
+    border: 1px solid blue;
+}
+
+div[ng-controller="SecondChildController as secondChild"] {
+    border: 1px solid green;
+}
+
+
+
+
+

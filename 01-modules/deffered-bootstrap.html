@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="../components/angular/angular.js"></script>
+
+    <script>
+
+        window.name = "NG_DEFER_BOOTSTRAP!";
+
+        // this module will start to load, and pause
+        angular.module('app', [])
+                .run(function ($rootScope) {
+                    $rootScope.msg = "Module up!";
+                });
+
+        // this function will continue the loading process
+        function continueTheLoading () {
+            angular.resumeBootstrap();
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div>
+    <h1>Angular loading is paused {{ msg }}</h1>
+
+    <button onclick="continueTheLoading()">Continue</button>
+
+</div>
+
+
+
+</body>
+</html>
