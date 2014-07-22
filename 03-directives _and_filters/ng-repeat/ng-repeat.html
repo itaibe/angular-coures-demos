@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="../../components/angular/angular.js"></script>
+    <script src="../../components/angular-animate/angular-animate.js"></script>
+    <script src="repeat.js"></script>
+
+
+</head>
+<body ng-controller="MainController">
+
+    <h1>The ng-repeat</h1>
+
+    <div ng-repeat="person in persons track by person.id">
+        {{$index}} - {{person.name}} first: {{ $first }}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../components/angular/angular.js"></script>
+
+    <script>
+
+        function MainController ($scope, $filter) {
+
+            $scope.date = new Date();
+
+            $scope.text = "Hello FILTERS";
+
+            $scope.person = {
+                name: "nir",
+                email: "nirkaufman@gmail.com"
+            };
+
+            $scope.colors = ['red','green','blue','yellow'];
+
+            $scope.names = [{name:'ariel'},{name: 'nir'},{name:'joe'},{name:'kirk'},{name:'mandy'}];
+
+            // using filters in controllers
+            $scope.myName = $filter('uppercase')('nir');
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<div ng-controller="MainController">
+
+    <h3>Date Examples</h3>
+
+    <p>{{ date | date:'fullDate' }}</p>
+    <p>{{ date | date:'shortDate' }}</p>
+    <p>{{ date | date:'shortTime' }}</p>
+    <p>{{ date | date:'mediumDate' }}</p>
+    <p>{{ date | date:'MMMM' }}</p>
+
+    <h3>Upper/lower case/</h3>
+
+    <p>{{ text | uppercase }}</p>
+    <p>{{ text | lowercase }}</p>
+
+    <h3>JSON</h3>
+    <pre>{{person | json}}</pre>
+
+    <h3>Limit to</h3>
+    <p>{{ colors | limitTo:2 }}</p>
+
+    <h3>Filters in controllers:</h3>
+    <p>{{myName}}</p>
+
+</div>
+
+
+
+
+</body>
+</html>
