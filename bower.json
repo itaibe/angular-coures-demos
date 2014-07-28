@@ -1,0 +1,23 @@
+{
+  "name": "angular-coures-demos",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nirkaufman/angular-coures-demos",
+  "authors": [
+    "Nir Kaufman <nirkaufman@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.2.20",
+    "angular-mocks": "~1.2.21",
+    "angular-resource": "~1.2.21",
+    "lodash": "~2.4.1"
+  }
+}
